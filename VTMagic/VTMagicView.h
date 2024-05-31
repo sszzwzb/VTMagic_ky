@@ -7,6 +7,13 @@
 //  https://github.com/tianzhuo112/VTMagic.git
 //
 
+
+/**
+ kaiyi 修改三方，2024.05.31
+ 
+ 新增功能
+ */
+
 #import <UIKit/UIKit.h>
 #import "VTMagicProtocol.h"
 #import "VTMagicMacros.h"
