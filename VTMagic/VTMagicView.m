@@ -757,6 +757,16 @@ static VTPanRecognizerDirection direction = VTPanRecognizerDirectionUndefined;
         }
     }
     
+    // kaiyi add
+    if (_delegate && [_delegate respondsToSelector:@selector(magicView:scrollX:slideToTheNextScale:isSwipeToLeft:nextPageIndex:currentPage:)]) {
+        
+        int a = round(offsetX);
+        int b = round(scrollWidth);
+        CGFloat slideToTheNextScale = ((a % b) * 1.0) / scrollWidth;
+        
+        [_delegate magicView:self scrollX:offsetX slideToTheNextScale:slideToTheNextScale isSwipeToLeft:isSwipeToLeft nextPageIndex:_nextPageIndex currentPage:_currentPage];
+    }
+    
     if (_nextPageIndex != tempIndex) _isViewWillAppear = NO;
     if (!_isViewWillAppear && newIndex != tempIndex) {
         _isViewWillAppear = YES;

@@ -140,6 +140,11 @@
 //    NSLog(@"index:%ld viewDidDisappear:%@", (long)pageIndex, viewController.view);
 }
 
+- (void)magicView:(VTMagicView *)magicView scrollX:(CGFloat)scrollX slideToTheNextScale:(CGFloat)slideToTheNextScale isSwipeToLeft:(BOOL)isSwipeToLeft nextPageIndex:(NSInteger)nextPageIndex currentPage:(NSInteger)currentPage {
+    
+    NSLog(@"-kaiyi add---------- %lf  %f  %d  %zd  %zd", scrollX, slideToTheNextScale, isSwipeToLeft, nextPageIndex, currentPage);
+}
+
 - (void)magicView:(VTMagicView *)magicView didSelectItemAtIndex:(NSUInteger)itemIndex {
 //    NSLog(@"didSelectItemAtIndex:%ld", (long)itemIndex);
 }

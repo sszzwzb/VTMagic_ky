@@ -7,13 +7,6 @@
 //  https://github.com/tianzhuo112/VTMagic.git
 //
 
-
-/**
- kaiyi 修改三方，2024.05.31
- 
- 新增功能
- */
-
 #import <UIKit/UIKit.h>
 #import "VTMagicProtocol.h"
 #import "VTMagicMacros.h"
@@ -79,6 +72,17 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param pageIndex      消失的控制器对应的索引
  */
 - (void)magicView:(VTMagicView *)magicView viewDidDisappear:(__kindof UIViewController *)viewController atPage:(NSUInteger)pageIndex;
+
+/**
+ *  kaiyi add
+ *  VC 滑动监听代理
+ *
+ *  SlideToTheNextScale  滑动到下一个比例  （0 ~ 1）
+ *  isSwipeToLeft   左滑  右滑
+ *  nextPageIndex   下一个要展示的
+ *  currentPage     当前要展示的
+ */
+- (void)magicView:(VTMagicView *)magicView scrollX:(CGFloat)scrollX slideToTheNextScale:(CGFloat)slideToTheNextScale isSwipeToLeft:(BOOL)isSwipeToLeft nextPageIndex:(NSInteger)nextPageIndex currentPage:(NSInteger)currentPage;
 
 /**
  *  选中导航菜单item时触发
